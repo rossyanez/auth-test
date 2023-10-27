@@ -26,8 +26,8 @@ export default function Home({ firstName }) {
 	};
 
 	return (
-		<div className="m-4 space-y-4 h-screen w-screen">
-			<div className="flex md:flex-row flex-col items-center justify-between gap-2 max-w-[1280px] m-auto">
+		<div className="space-y-4 h-screen w-screen">
+			<div className="flex flex-col items-start self-stretch px-4 gap-6 md:flex-row md:justify-between max-w-[1280px] m-auto">
 				<div>
 					<h1 className="text-3xl font-semibold leading-8 font-inter">Welcome back!</h1>
 				</div>
