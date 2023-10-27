@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Cookies = require("js-cookie");
 
-export default function Home() {
+export default function Login() {
 	const router = useRouter();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -28,7 +28,7 @@ export default function Home() {
 			if (response.error) {
 				setError(response.message);
 			} else {
-				Cookies.set("token", response.access_token);
+				Cookies.set("token", response.token);
 				router.push("/");
 			}
 		}
@@ -59,7 +59,7 @@ export default function Home() {
 							<label htmlFor="password">Password</label>
 							<input required id="password" type="password" className="h-10 border border-[#D0D5DD] rounded block px-4 w-[100%]" placeholder="••••••••" value={password} onChange={(event) => setPassword(event.target.value)} />
 						</div>
-						<button className="flex px-[18px] py-[10px] items-center justify-center gap-2 border rounded-lg bg-[#7F56D9] w-[100%] text-white font-semibold shadow-[0_1px_2px_0px_rgba(16, 24, 40, 0.05" type="submit">
+						<button className="flex px-[18px] py-[10px] items-center justify-center gap-2 border rounded-lg bg-[#7F56D9] w-[100%] text-white font-semibold shadow-[0_1px_2px_0px_rgba(16, 24, 40, 0.05]" type="submit">
 							{loading ? "Logging in..." : "Sign in"}
 						</button>
 					</form>
