@@ -46,11 +46,11 @@ export default function Register() {
 					<form className="flex flex-col items-center gap-6 self-stretch" onSubmit={(event) => onRegister(event)}>
 						<div className="flex flex-col items-start gap-[6px] self-stretch">
 							<label htmlFor="firstName">First Name</label>
-							<input required id="firstName" type="text" className="h-10 border border-[#D0D5DD] rounded block px-4 w-[100%]" placeholder="Enter your email" value={firstName} onChange={(event) => setFirstName(event.target.value)} />
+							<input required id="firstName" type="text" className="h-10 border border-[#D0D5DD] rounded block px-4 w-[100%]" placeholder="Enter your first name" value={firstName} onChange={(event) => setFirstName(event.target.value)} />
 						</div>
 						<div className="flex flex-col items-start gap-[6px] self-stretch">
 							<label htmlFor="lastName">Last Name</label>
-							<input required id="lastName" type="text" className="h-10 border border-[#D0D5DD] rounded block px-4 w-[100%]" placeholder="Enter your email" value={lastName} onChange={(event) => setLastName(event.target.value)} />
+							<input required id="lastName" type="text" className="h-10 border border-[#D0D5DD] rounded block px-4 w-[100%]" placeholder="Enter your last name" value={lastName} onChange={(event) => setLastName(event.target.value)} />
 						</div>
 						<div className="flex flex-col items-start gap-[6px] self-stretch">
 							<label htmlFor="email">Email</label>

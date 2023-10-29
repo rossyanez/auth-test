@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Cookies = require("js-cookie");
 
-export default function Home({ firstName }) {
+export default function Dashboard({ firstName }) {
 	const router = useRouter();
 
 	const cookie = Cookies.get("token");
@@ -38,7 +38,9 @@ export default function Home({ firstName }) {
 					<div>
 						<Image className="hidden" src="menu.svg" width={24} height={24} alt="mobile menu" />
 						<ul className="flex items-center md:gap-8 gap-2">
-							<li className="font-inter text-base font-semibold leading-6 text-[#667085]">Home</li>
+							<li className="font-inter text-base font-semibold leading-6 text-[#667085]">
+								<a href="/">Home</a>
+							</li>
 							<button className="flex px-[18px] h-[39px] py-[10px] items-center justify-center gap-2 text-red-400 font-semibold shadow-[0_1px_2px_0px_rgba(16, 24, 40, 0.05]" onClick={onLogout}>
 								Logout
 							</button>

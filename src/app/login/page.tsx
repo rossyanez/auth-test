@@ -8,6 +8,9 @@ import Image from "next/image";
 const Cookies = require("js-cookie");
 
 export default function Login() {
+	const onSignup = () => {
+		router.push("/register");
+	};
 	const router = useRouter();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -45,7 +48,7 @@ export default function Login() {
 							<p className="text-base leading-6 font-inter text-[#667085]">Welcome back! Please enter your details.</p>
 						</div>
 					</div>
-					<form className="flex flex-col items-center gap-6 self-stretch" onSubmit={(event) => onLogin(event)}>
+					<form className="flex flex-col items-center gap-6 self-stretch mb-[-30px]" onSubmit={(event) => onLogin(event)}>
 						{error && (
 							<div className="p-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 w-[100%]" role="alert">
 								{error}
@@ -63,6 +66,9 @@ export default function Login() {
 							{loading ? "Logging in..." : "Sign in"}
 						</button>
 					</form>
+					<button className="flex px-[18px] py-[10px] items-center justify-center gap-2 border rounded-lg bg-[#7F56D9] w-[100%] text-white font-semibold shadow-[0_1px_2px_0px_rgba(16, 24, 40, 0.05]" onClick={onSignup}>
+						Create an account
+					</button>
 				</div>
 			</div>
 		</>
