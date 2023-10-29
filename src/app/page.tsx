@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Cookies = require("js-cookie");
 
-export default function Home({ firstName }) {
+export default function Home() {
 	const router = useRouter();
 
 	const cookie = Cookies.get("token");
