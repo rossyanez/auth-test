@@ -2,7 +2,6 @@
 
 import { useRouter } from "next/navigation";
 import Logo from "@/components/logo";
-import Menu from "@/components/menu";
 import Image from "next/image";
 
 const Cookies = require("js-cookie");
@@ -18,14 +17,6 @@ export default function Home() {
 	const onLogout = () => {
 		Cookies.remove("token");
 		router.push("/login");
-	};
-
-	const goDashboard = () => {
-		router.push("/");
-	};
-
-	const goAbout = () => {
-		router.push("/about");
 	};
 
 	return (
