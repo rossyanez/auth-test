@@ -1,6 +1,9 @@
 import Logo from "./logo";
+import { useRouter } from "next/navigation";
+const Cookies = require("js-cookie");
 
 function Menu() {
+	const router = useRouter();
 	const onLogout = () => {
 		Cookies.remove("token");
 		router.push("/login");
