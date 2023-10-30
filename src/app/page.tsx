@@ -12,7 +12,6 @@ export default function Home() {
 
 	const cookie = Cookies.get("token");
 	if (!cookie) {
-		// router.push("/login");
 		useEffect(() => {
 			router.push("/login");
 		});
@@ -20,7 +19,6 @@ export default function Home() {
 
 	const onLogout = () => {
 		Cookies.remove("token");
-		// useEffect(router.push("/login"));
 		useEffect(() => {
 			router.push("/login");
 		});
