@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Logo from "@/components/logo";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const Cookies = require("js-cookie");
 
@@ -11,12 +12,18 @@ export default function Home() {
 
 	const cookie = Cookies.get("token");
 	if (!cookie) {
-		router.push("/login");
+		// router.push("/login");
+		useEffect(() => {
+			router.push("/login");
+		});
 	}
 
 	const onLogout = () => {
 		Cookies.remove("token");
-		router.push("/login");
+		// useEffect(router.push("/login"));
+		useEffect(() => {
+			router.push("/login");
+		});
 	};
 
 	return (
